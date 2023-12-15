@@ -50,7 +50,7 @@ public class PaymentController {
         services.forEach(System.out::println);
         List<ServiceInstance> instances = discoveryClient.getInstances("CLOUD-PAYMENT-SERVICE");
         instances.stream().forEach(serviceInstance -> {
-            System.out.println(serviceInstance.getServiceId()+"\t"+serviceInstance.getHost()+"\t"+serviceInstance.getUri());
+            System.out.println(serviceInstance.getServiceId()+"\t"+serviceInstance.getPort()+"\t"+serviceInstance.getUri());
 
         });
         return this.discoveryClient;
