@@ -36,6 +36,10 @@ public class PaymentController {
         System.out.println("1234567890");
         return new CommonResult<>(200, "insert success， serverPort："+serverPort,insert);
     }
+    @GetMapping("lb")
+    public String getPaymentLB(){
+        return serverPort;
+    }
 
 
 }
