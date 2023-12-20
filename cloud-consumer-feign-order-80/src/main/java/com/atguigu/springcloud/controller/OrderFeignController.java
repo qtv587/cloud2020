@@ -21,4 +21,11 @@ public class OrderFeignController {
     public CommonResult<Payment> getPaymentById(@PathVariable("id") Long id){
         return paymentFeignService.selectOne(id);
     }
+
+    @GetMapping("/consumer/payment/feign/timeout")
+    public String paymentFeiTimeout(){
+        return paymentFeignService.paymentFeiTimeout();
+    }
+
+
 }
