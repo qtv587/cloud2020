@@ -19,6 +19,7 @@ spring:
           destination: studyExchange
           content-type: application/json
           binder: defaultRabbit
+          group: atguiguA
 
 eureka:
   client: # 客户端进行Eureka注册的配置
