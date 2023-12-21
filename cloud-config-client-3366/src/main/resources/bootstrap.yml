@@ -1,5 +1,5 @@
 server:
-  port: 3355
+  port: 3366
 
 spring:
   application:
@@ -19,12 +19,13 @@ spring:
     username: guest
     password: guest
 
-
 #服务注册到eureka地址
 eureka:
   client:
     service-url:
       defaultZone: http://localhost:7001/eureka
+
+##rabbitmq相关配置,暴露bus刷新配置的端点
 
 # 通过curl -X POST "http://localhost:3355/actuator/refresh"刷新
 management:
